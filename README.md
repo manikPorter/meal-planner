@@ -1,3 +1,7 @@
+# Meal Planner
+
+**Live Site:** [https://manikporter.github.io/meal-planner](https://manikporter.github.io/meal-planner)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
