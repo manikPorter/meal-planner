@@ -1,38 +1,260 @@
-.App {
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f39c12;
+  --success-color: #27ae60;
+  --danger-color: #e74c3c;
+  --warning-color: #f1c40f;
+  --light-bg: #f8f9fa;
+  --dark-text: #2c3e50;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+.meal-planner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 40px 0;
+  margin: -20px -20px 30px -20px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header p {
+  margin: 10px 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.custom-tabs {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.custom-tabs .nav-link {
+  border: none;
+  padding: 15px 30px;
+  color: var(--dark-text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.custom-tabs .nav-link:hover {
+  background-color: #f8f9fa;
+  color: var(--primary-color);
+}
+
+.custom-tabs .nav-link.active {
+  background-color: var(--primary-color);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--secondary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.btn-custom {
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-generate {
+  background: linear-gradient(135deg, var(--success-color), #2ecc71);
+  color: white;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, var(--primary-color), #5dade2);
+  color: white;
+}
+
+.meal-table {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.meal-table thead th {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.meal-table tbody td {
+  padding: 15px;
+  border-color: #e9ecef;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.meal-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.meal-item {
+  display: inline-block;
+  background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: var(--primary-color);
+  font-weight: 500;
+  border: 2px solid #e3f2fd;
+}
+
+.add-meal-form {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.form-control, .form-select {
+  border-radius: var(--border-radius);
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.meal-category {
+  margin-bottom: 30px;
+}
+
+.meal-category h4 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--secondary-color);
+  display: inline-block;
+}
+
+.list-group-item {
+  border-radius: var(--border-radius) !important;
+  margin-bottom: 8px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.btn-remove {
+  background-color: var(--danger-color);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.btn-remove:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.meal-emoji {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .meal-planner-container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header {
+    margin: -10px -10px 20px -10px;
+    padding: 30px 15px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .content-card {
+    padding: 20px 15px;
+  }
+  
+  .custom-tabs .nav-link {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .meal-table {
+    font-size: 0.9rem;
+  }
+  
+  .meal-table thead th,
+  .meal-table tbody td {
+    padding: 10px 8px;
   }
 }
