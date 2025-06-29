@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/meal-planner/static/css/main.17b3ca8e.css",
+    "main.js": "/meal-planner/static/js/main.ffe9cc0b.js",
+    "static/js/453.f24bff0a.chunk.js": "/meal-planner/static/js/453.f24bff0a.chunk.js",
+    "index.html": "/meal-planner/index.html",
+    "main.17b3ca8e.css.map": "/meal-planner/static/css/main.17b3ca8e.css.map",
+    "main.ffe9cc0b.js.map": "/meal-planner/static/js/main.ffe9cc0b.js.map",
+    "453.f24bff0a.chunk.js.map": "/meal-planner/static/js/453.f24bff0a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17b3ca8e.css",
+    "static/js/main.ffe9cc0b.js"
+  ]
+}
